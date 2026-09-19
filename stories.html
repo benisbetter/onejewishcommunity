@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stories &amp; Podcasts — One Jewish Community</title>
+<meta name="description" content="Personal stories, videos, podcasts, and community voices from across the Jewish world. Facts are important, but stories create connection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="12" y1="2.5" x2="3.8" y2="16.8" stroke="#2563EB" stroke-width="1.4"/>
+        <line x1="3.8" y1="16.8" x2="20.2" y2="16.8" stroke="#2563EB" stroke-width="1.4"/>
+        <line x1="20.2" y1="16.8" x2="12" y2="2.5" stroke="#2563EB" stroke-width="1.4"/>
+        <line x1="12" y1="21.5" x2="3.8" y2="7.2" stroke="#F5B642" stroke-width="1.4"/>
+        <line x1="3.8" y1="7.2" x2="20.2" y2="7.2" stroke="#F5B642" stroke-width="1.4"/>
+        <line x1="20.2" y1="7.2" x2="12" y2="21.5" stroke="#F5B642" stroke-width="1.4"/>
+        <circle cx="12" cy="2.5" r="2.2" fill="#0B1F5E"/>
+        <circle cx="3.8" cy="16.8" r="2.2" fill="#0B1F5E"/>
+        <circle cx="20.2" cy="16.8" r="2.2" fill="#0B1F5E"/>
+        <circle cx="12" cy="21.5" r="2.2" fill="#2563EB"/>
+        <circle cx="3.8" cy="7.2" r="2.2" fill="#2563EB"/>
+        <circle cx="20.2" cy="7.2" r="2.2" fill="#2563EB"/>
+        <circle cx="12" cy="12" r="2.6" fill="#F5B642"/>
+      </svg>
+      One Jewish Community
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="about.html">About</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="partners.html">Partner Hub</a></li>
+        <li><a href="stories.html" class="active">Stories</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="index.html#get-started" class="btn btn-primary btn-sm">Join the Movement</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Stories &amp; Podcasts</span>
+    <h1>Every Story Builds Empathy</h1>
+    <p>Facts are important, but stories create connection. Read, watch, and listen to voices from across the community.</p>
+  </div>
+</section>
+
+<!-- ============ STORY EXPLORER ============ -->
+<section>
+  <div class="container">
+    <div class="search-shell reveal">
+      <div class="search-bar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="siteSearch" placeholder="Search stories, podcasts, or topics" aria-label="Search stories">
+      </div>
+      <div class="filter-chips">
+        <button class="chip active" type="button" data-filter="all">All</button>
+        <button class="chip" type="button" data-filter="written">Written</button>
+        <button class="chip" type="button" data-filter="video">Video</button>
+        <button class="chip" type="button" data-filter="podcast">Podcasts</button>
+      </div>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card story-card reveal" data-filterable data-tags="written">
+        <div class="img-ph story-img"><span>🕯️</span></div>
+        <span class="story-type written">✍️ Written Story</span>
+        <h3>Finding Shabbat in a New City</h3>
+        <p>A student shares how a Shabbat dinner helped them feel less alone in a new place.</p>
+        <span class="story-meta">📖 5 min read</span>
+        <a href="about.html#suggest" class="btn btn-secondary btn-sm">Read Story</a>
+      </div>
+      <div class="card story-card reveal" data-filterable data-tags="written">
+        <div class="img-ph story-img ph-green"><span>🤝</span></div>
+        <span class="story-type written">✍️ Written Story</span>
+        <h3>A Small Act, A Big Impact</h3>
+        <p>One person stands up for a Jewish friend and creates a moment of real support.</p>
+        <span class="story-meta">📖 4 min read</span>
+        <a href="about.html#suggest" class="btn btn-secondary btn-sm">Read Story</a>
+      </div>
+      <div class="card story-card reveal" data-filterable data-tags="video">
+        <div class="img-ph story-img ph-gold"><span>✈️</span></div>
+        <span class="story-type video">🎬 Video Story</span>
+        <h3>Coming Home: A Journey to Israel</h3>
+        <p>A young person reflects on visiting Israel and understanding their identity in a deeper way.</p>
+        <span class="story-meta">▶ 6 min watch</span>
+        <a href="about.html#suggest" class="btn btn-primary btn-sm">Watch</a>
+      </div>
+      <div class="card story-card reveal" data-filterable data-tags="written">
+        <div class="img-ph story-img"><span>📜</span></div>
+        <span class="story-type written">✍️ Written Story</span>
+        <h3>Lessons from My Zayde</h3>
+        <p>A family story about Jewish memory, tradition, and identity passed between generations.</p>
+        <span class="story-meta">📖 3 min read</span>
+        <a href="about.html#suggest" class="btn btn-secondary btn-sm">Read Story</a>
+      </div>
+      <div class="card story-card reveal" data-filterable data-tags="podcast">
+        <div class="img-ph story-img ph-green"><span>🎙️</span></div>
+        <span class="story-type podcast">🎙 Podcast</span>
+        <h3>Voices of Our Community</h3>
+        <p>Conversations with young Jews from different communities around the world.</p>
+        <span class="story-meta">🎧 New episodes weekly</span>
+        <a href="about.html#suggest" class="btn btn-primary btn-sm">Listen</a>
+      </div>
+      <div class="card story-card reveal" data-filterable data-tags="podcast">
+        <div class="img-ph story-img ph-gold"><span>🎧</span></div>
+        <span class="story-type podcast">🎙 Podcast</span>
+        <h3>Jewish Journeys Podcast</h3>
+        <p>A podcast about identity, Israel, community, and belonging.</p>
+        <span class="story-meta">🎧 New episodes weekly</span>
+        <a href="about.html#suggest" class="btn btn-primary btn-sm">Listen</a>
+      </div>
+    </div>
+    <p class="no-results" id="noResults">No stories match that search. Try a different keyword or filter.</p>
+
+    <div class="quote-card reveal">
+      <p>Every story builds empathy.<br><span class="gold-text">Every voice creates connection.</span></p>
+    </div>
+
+    <div class="get-cta reveal">
+      <h3>Have a story worth telling?</h3>
+      <a href="about.html#suggest" class="btn btn-primary">Share Your Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="12" y1="2.5" x2="3.8" y2="16.8" stroke="#F5B642" stroke-width="1.4"/>
+            <line x1="3.8" y1="16.8" x2="20.2" y2="16.8" stroke="#F5B642" stroke-width="1.4"/>
+            <line x1="20.2" y1="16.8" x2="12" y2="2.5" stroke="#F5B642" stroke-width="1.4"/>
+            <line x1="12" y1="21.5" x2="3.8" y2="7.2" stroke="#FFFFFF" stroke-width="1.4"/>
+            <line x1="3.8" y1="7.2" x2="20.2" y2="7.2" stroke="#FFFFFF" stroke-width="1.4"/>
+            <line x1="20.2" y1="7.2" x2="12" y2="21.5" stroke="#FFFFFF" stroke-width="1.4"/>
+            <circle cx="12" cy="12" r="2.4" fill="#F5B642"/>
+          </svg>
+          One Jewish Community
+        </a>
+        <p class="footer-tagline">The digital bridge connecting Jews across backgrounds, countries, communities, and organizations.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="communities.html">Communities</a></li>
+          <li><a href="partners.html">Partner Hub</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="about.html">About &amp; Mission</a></li>
+          <li><a href="stories.html">Stories &amp; Podcasts</a></li>
+          <li><a href="about.html#safety">Safety</a></li>
+          <li><a href="about.html#roadmap">Our Roadmap</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Take Action</h4>
+        <ul>
+          <li><a href="index.html#get-started">Get Started</a></li>
+          <li><a href="about.html#suggest">Share Your Story</a></li>
+          <li><a href="about.html#suggest">Suggest an Update</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>One Jewish Community shares information and connects you to organizations. Programs and events are run by the organizations themselves.</span>
+      <span class="footer-slogan">Together. Connected. Stronger.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
