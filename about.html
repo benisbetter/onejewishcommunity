@@ -4,19 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About &amp; Mission — One Jewish Community</title>
-<meta name="description" content="Why One Jewish Community exists: our mission, values, the three pillars, safety commitments, and the roadmap for the digital bridge connecting Jewish communities.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<meta name="description" content="Why One Jewish Community exists, the three pillars it is built on, how it keeps people safe, and where it is going next.">
+<link rel="canonical" href="https://benisbetter.github.io/onejewishcommunity/about.html">
+<meta name="theme-color" content="#0B1F5E">
+<meta name="color-scheme" content="light">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="One Jewish Community">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="About &amp; Mission — One Jewish Community">
+<meta property="og:description" content="Why One Jewish Community exists, the three pillars it is built on, how it keeps people safe, and where it is going next.">
+<meta property="og:url" content="https://benisbetter.github.io/onejewishcommunity/about.html">
+<meta property="og:image" content="https://benisbetter.github.io/onejewishcommunity/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="One Jewish Community — Together. Connected. Stronger.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About &amp; Mission — One Jewish Community">
+<meta name="twitter:description" content="Why One Jewish Community exists, the three pillars it is built on, how it keeps people safe, and where it is going next.">
+<meta name="twitter:image" content="https://benisbetter.github.io/onejewishcommunity/og-image.png">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+
+<link rel="preload" href="fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plus-jakarta-sans-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css?v=3">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ============ HEADER ============ -->
 <header class="site-header">
   <div class="container nav">
     <a href="index.html" class="brand">
-      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="brand-mark" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
         <line x1="12" y1="2.5" x2="3.8" y2="16.8" stroke="#2563EB" stroke-width="1.4"/>
         <line x1="3.8" y1="16.8" x2="20.2" y2="16.8" stroke="#2563EB" stroke-width="1.4"/>
         <line x1="20.2" y1="16.8" x2="12" y2="2.5" stroke="#2563EB" stroke-width="1.4"/>
@@ -33,9 +57,9 @@
       </svg>
       One Jewish Community
     </a>
-    <nav>
+    <nav aria-label="Main">
       <ul class="nav-links" id="navLinks">
-        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About</a></li>
         <li><a href="communities.html">Communities</a></li>
         <li><a href="partners.html">Partner Hub</a></li>
         <li><a href="stories.html">Stories</a></li>
@@ -44,20 +68,32 @@
       </ul>
     </nav>
     <div class="nav-cta">
-      <a href="index.html#get-started" class="btn btn-primary btn-sm">Join the Movement</a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <a href="join.html" class="btn btn-primary btn-sm">Get Involved</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
 
+
+<main id="main">
 <!-- ============ PAGE HERO ============ -->
 <section class="page-hero">
   <div class="container">
     <span class="eyebrow">About &amp; Mission</span>
     <h1>Why One Jewish Community Exists</h1>
     <p>To strengthen Jewish unity by creating one accessible digital space where Jews around the world can connect, learn, share stories, discover opportunities, and build real relationships across communities.</p>
+  </div>
+</section>
+
+<!-- ============ STATUS ============ -->
+<section class="status-band">
+  <div class="container">
+    <div class="note-strip reveal" style="margin-bottom:0;">
+      <span>📍</span>
+      <span><strong>Where this actually is, as of September 2026:</strong> the directory works — 13 organizations, a calendar of real dates and a searchable opportunity hub, all linking to official sources. Community groups, user profiles, messaging and moderated discussion spaces are designed but <em>not built</em>. Nothing on this site pretends otherwise. <a href="join.html">Get involved</a> if you want to change that faster.</span>
+    </div>
   </div>
 </section>
 
@@ -365,7 +401,7 @@
         <p>Users connected globally</p>
       </div>
     </div>
-    <p class="stat-note">First-phase goals for building a stronger connected community.</p>
+    <p class="stat-note"><strong>These are targets, not results.</strong> Not one of these numbers has been reached — they are what the first phase is aiming at. Today the site lists 13 organizations, 9 planned community groups and 0 published stories. We will update these figures as real ones replace them, and we will not round up.</p>
 
     <ul class="impact-list reveal">
       <li>More young Jews feel connected.</li>
@@ -387,28 +423,28 @@
     </div>
     <div class="grid grid-4">
       <div class="phase-card reveal">
-        <span class="phase-badge">Phase 1</span>
+        <span class="phase-badge">Phase 1</span><span class="phase-state now">In progress</span>
         <h3>Build the Foundation</h3>
         <ul>
-          <li>Launch the public website</li>
+          <li class="done">Launch the public website</li>
           <li>Create the first community groups</li>
-          <li>Build basic partner organization pages</li>
+          <li class="done">Build basic partner organization pages</li>
           <li>Add the first stories and podcast content</li>
           <li>Create safety guidelines and moderation tools</li>
         </ul>
       </div>
       <div class="phase-card reveal">
-        <span class="phase-badge">Phase 2</span>
+        <span class="phase-badge">Phase 2</span><span class="phase-state">Started</span>
         <h3>Connect Existing Organizations</h3>
         <ul>
-          <li>Add partner pages for Jewish organizations</li>
-          <li>Add searchable events and opportunities</li>
-          <li>Help users discover camps, trips, scholarships, campus groups, and local communities</li>
+          <li class="done">Add partner pages for Jewish organizations</li>
+          <li class="done">Add searchable events and opportunities</li>
+          <li class="done">Help users discover camps, trips, scholarships, campus groups and local communities</li>
           <li>Create verified organization badges</li>
         </ul>
       </div>
       <div class="phase-card reveal">
-        <span class="phase-badge">Phase 3</span>
+        <span class="phase-badge">Phase 3</span><span class="phase-state">Not started</span>
         <h3>Grow the Community</h3>
         <ul>
           <li>Expand community groups by age, location, interest, and organization</li>
@@ -418,7 +454,7 @@
         </ul>
       </div>
       <div class="phase-card reveal">
-        <span class="phase-badge">Phase 4</span>
+        <span class="phase-badge">Phase 4</span><span class="phase-state">Not started</span>
         <h3>Scale Globally</h3>
         <ul>
           <li>Connect Jewish communities across countries</li>
@@ -440,7 +476,7 @@
       <h2 class="section-title">Suggest an Organization, Event, or Story</h2>
       <p class="section-lead">Know something that belongs on the platform? Send it in — every suggestion is reviewed before anything is published.</p>
     </div>
-    <form class="suggest-form reveal" id="suggestForm">
+    <form class="suggest-form reveal" id="suggestForm" data-form="Suggestion" data-thanks="formThanks" novalidate>
       <div class="form-row">
         <div class="form-field">
           <label for="sgName">Your name</label>
@@ -465,7 +501,9 @@
         <label for="sgMsg">Tell us about it</label>
         <textarea id="sgMsg" name="message" placeholder="Share links, dates, or details…" required></textarea>
       </div>
+      <p class="form-consent">We only use your email to follow up on this suggestion. See the <a href="privacy.html">privacy notice</a>.</p>
       <button type="submit" class="btn btn-primary">Send Suggestion</button>
+      <p class="form-status" data-form-status role="status" aria-live="polite"></p>
     </form>
     <div class="form-thanks card" id="formThanks">
       <div class="icon-box green" style="margin: 0 auto 14px;">💙</div>
@@ -488,6 +526,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
@@ -495,7 +534,7 @@
     <div class="footer-grid">
       <div>
         <a href="index.html" class="brand">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
             <line x1="12" y1="2.5" x2="3.8" y2="16.8" stroke="#F5B642" stroke-width="1.4"/>
             <line x1="3.8" y1="16.8" x2="20.2" y2="16.8" stroke="#F5B642" stroke-width="1.4"/>
             <line x1="20.2" y1="16.8" x2="12" y2="2.5" stroke="#F5B642" stroke-width="1.4"/>
@@ -506,42 +545,44 @@
           </svg>
           One Jewish Community
         </a>
-        <p class="footer-tagline">The digital bridge connecting Jews across backgrounds, countries, communities, and organizations.</p>
+        <p class="footer-tagline">The digital bridge connecting Jews across backgrounds, countries, communities and organizations.</p>
       </div>
       <div class="footer-col">
-        <h4>Explore</h4>
+        <h2>Explore</h2>
         <ul>
           <li><a href="communities.html">Communities</a></li>
           <li><a href="partners.html">Partner Hub</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="stories.html">Stories &amp; Podcasts</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Learn</h4>
+        <h2>Learn</h2>
         <ul>
           <li><a href="about.html">About &amp; Mission</a></li>
-          <li><a href="stories.html">Stories &amp; Podcasts</a></li>
           <li><a href="about.html#safety">Safety</a></li>
           <li><a href="about.html#roadmap">Our Roadmap</a></li>
+          <li><a href="privacy.html">Privacy &amp; Terms</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Take Action</h4>
+        <h2>Take Action</h2>
         <ul>
-          <li><a href="index.html#get-started">Get Started</a></li>
-          <li><a href="about.html#suggest">Share Your Story</a></li>
+          <li><a href="join.html">Get Involved</a></li>
+          <li><a href="join.html#organization">List Your Organization</a></li>
           <li><a href="about.html#suggest">Suggest an Update</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>One Jewish Community shares information and connects you to organizations. Programs and events are run by the organizations themselves.</span>
+      <span>One Jewish Community is an independent project. It shares information and links to organizations — programs, events and opportunities are run by those organizations themselves.</span>
       <span class="footer-slogan">Together. Connected. Stronger.</span>
     </div>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>

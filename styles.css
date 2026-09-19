@@ -50,9 +50,44 @@ a { color: var(--blue); text-decoration: none; }
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible {
-  outline: 3px solid rgba(37, 99, 235, 0.35);
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.55);
   outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Skip link — hidden until keyboard-focused */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 999;
+  background: var(--navy);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: 0 0 12px 12px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: top 0.18s ease;
+}
+.skip-link:focus { top: 0; }
+
+main:focus { outline: none; }
+
+/* Screen-reader-only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .container {
@@ -1107,9 +1142,11 @@ section { padding: 88px 0; }
 }
 .site-footer .brand { color: var(--white); margin-bottom: 14px; }
 .footer-tagline { font-size: 14px; max-width: 280px; }
+.footer-col h2,
 .footer-col h4 {
   color: var(--white);
   font-size: 13px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 14px;
@@ -1279,6 +1316,191 @@ section { padding: 88px 0; }
 @media (max-width: 720px) {
   .form-row { grid-template-columns: 1fr; }
   .page-hero { padding: 44px 0 40px; }
+}
+
+/* ============================================================
+   Honest-status labels, forms, prose
+   ============================================================ */
+
+/* ---------- Status pills ---------- */
+.status-soon,
+.status-wanted,
+.event-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-head);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--light-blue);
+  color: var(--blue-dark);
+  border: 1px solid #C8DDFA;
+}
+.status-soon::before,
+.event-status::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.status-wanted {
+  background: var(--green-soft);
+  color: #047857;
+  border-color: #BBF0DA;
+}
+.status-wanted::before { content: "✍️"; }
+
+/* ---------- Live result count ---------- */
+.result-count {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 0 0 20px;
+}
+
+/* ---------- Supporting copy under a CTA heading ---------- */
+.cta-sub {
+  max-width: 640px;
+  margin: -10px auto 22px;
+  color: var(--text-light);
+  font-size: 15.5px;
+}
+
+/* ---------- Roadmap phase state ---------- */
+.phase-state {
+  display: inline-block;
+  margin-left: 8px;
+  font-family: var(--font-head);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.72);
+  vertical-align: middle;
+}
+.phase-state.now {
+  background: var(--gold);
+  color: var(--navy);
+}
+.phase-card li.done {
+  position: relative;
+  opacity: 0.92;
+}
+.phase-card li.done::marker { content: "✓  "; }
+
+/* ---------- Forms ---------- */
+.form-field label { display: flex; align-items: center; gap: 8px; }
+.field-optional {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+  background: var(--gray);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  background: var(--white);
+  border-color: var(--blue);
+}
+.form-field input:user-invalid,
+.form-field textarea:user-invalid {
+  border-color: #DC2626;
+}
+.form-consent {
+  font-size: 13px;
+  color: var(--text-light);
+  margin: 4px 0 18px;
+  line-height: 1.5;
+}
+.form-status {
+  margin-top: 14px;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.55;
+  border-radius: 12px;
+  padding: 0;
+}
+.form-status:empty { display: none; }
+.form-status.is-pending { color: var(--text-light); padding: 10px 0 0; }
+.form-status.is-ok {
+  background: var(--green-soft);
+  color: #047857;
+  border: 1px solid #BBF0DA;
+  padding: 12px 14px;
+}
+.form-status.is-warn {
+  background: #FEF6E3;
+  color: #6B4E0B;
+  border: 1px solid #F5DFA8;
+  padding: 12px 14px;
+}
+.form-status.is-error {
+  background: #FEF2F2;
+  color: #B91C1C;
+  border: 1px solid #FBD5D5;
+  padding: 12px 14px;
+}
+.form-status a { text-decoration: underline; white-space: nowrap; }
+.suggest-form + .suggest-form,
+#organization .suggest-form { margin-top: 44px; }
+
+/* ---------- Status band ---------- */
+.status-band { padding: 40px 0 0; }
+
+/* ---------- Long-form prose (privacy, terms) ---------- */
+.prose {
+  max-width: 740px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 44px 48px;
+}
+.prose h2 {
+  font-size: 22px;
+  margin: 38px 0 12px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+.prose h2:first-of-type { margin-top: 8px; padding-top: 0; border-top: 0; }
+.prose p { margin-bottom: 14px; }
+.prose ul { margin: 0 0 18px 22px; }
+.prose li { margin-bottom: 9px; }
+.prose strong { color: var(--navy); }
+.prose a { text-decoration: underline; }
+.prose-updated {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+  background: var(--gray);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 12px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 720px) {
+  .prose { padding: 30px 22px; border-radius: var(--radius); }
+  .prose h2 { font-size: 19px; }
 }
 
 /* ---------- Reduced motion ---------- */
