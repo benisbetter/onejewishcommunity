@@ -1348,6 +1348,8 @@ section { padding: 88px 0; }
 .event-status {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
+  width: fit-content;
   gap: 6px;
   white-space: nowrap;
   font-family: var(--font-head);
@@ -1376,6 +1378,15 @@ section { padding: 88px 0; }
   border-color: #BBF0DA;
 }
 .status-wanted::before { content: "✍️"; }
+
+/* "Opening soon" is not a live state — override the card's green dot */
+.community-card .members.status-soon {
+  color: var(--blue-dark);
+  font-size: 12.5px;
+  font-weight: 700;
+  margin: 10px 0 16px;
+}
+.community-card .members.status-soon::before { background: var(--blue); }
 
 /* ---------- Live result count ---------- */
 .result-count {
