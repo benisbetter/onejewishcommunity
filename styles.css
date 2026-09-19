@@ -232,6 +232,9 @@ section { padding: 88px 0; }
   list-style: none;
 }
 
+/* Only appears inside the mobile menu, where the header CTA is hidden */
+.nav-join { display: none; }
+
 .nav-links a {
   color: var(--text);
   font-weight: 500;
@@ -847,7 +850,7 @@ section { padding: 88px 0; }
   margin-bottom: 16px;
 }
 .event-meta span { display: inline-flex; align-items: center; gap: 5px; }
-.event-foot { display: flex; align-items: center; justify-content: space-between; margin-top: auto; gap: 10px; }
+.event-foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: auto; gap: 10px; }
 .going { font-size: 12.5px; font-weight: 600; color: var(--text-light); display: flex; align-items: center; gap: 6px; }
 .going .avatar-stack .avatar { width: 22px; height: 22px; font-size: 8px; border-width: 1.5px; }
 
@@ -1207,6 +1210,23 @@ section { padding: 88px 0; }
     gap: 16px;
     box-shadow: var(--shadow);
   }
+  /* The header CTA is hidden on mobile, so the menu carries it instead */
+  .nav-links.open .nav-join {
+    display: block;
+    margin-top: 4px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .nav-links.open .nav-join a {
+    display: block;
+    background: var(--blue);
+    color: var(--white);
+    text-align: center;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 999px;
+  }
+  .nav-links.open .nav-join a.active { background: var(--navy); }
 
   /* Network map becomes a wrapped cloud on mobile */
   .network-wrap { height: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 24px 0; }
@@ -1329,6 +1349,7 @@ section { padding: 88px 0; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
   font-family: var(--font-head);
   font-size: 12.5px;
   font-weight: 700;
@@ -1339,6 +1360,8 @@ section { padding: 88px 0; }
   color: var(--blue-dark);
   border: 1px solid #C8DDFA;
 }
+.event-status { font-size: 11.5px; padding: 4px 9px; }
+.event-status::before { width: 6px; height: 6px; }
 .status-soon::before,
 .event-status::before {
   content: "";
